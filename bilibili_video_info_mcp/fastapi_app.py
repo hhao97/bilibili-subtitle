@@ -64,3 +64,7 @@ async def get_video_info(payload: VideoInfoRequest) -> VideoInfoResponse:
 @app.get("/health")
 def health():
     return {"ok": True}
+
+@app.get("/")
+def root():
+    return {"ok": True}
