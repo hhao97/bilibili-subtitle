@@ -60,3 +60,7 @@ async def get_video_info(payload: VideoInfoRequest) -> VideoInfoResponse:
         danmaku=danmaku or [],
         comments=comments or [],
     )
+
+@app.get("/health")
+def health():
+    return {"ok": True}

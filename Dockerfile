@@ -23,4 +23,5 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Default command
-CMD ["uv", "run",   "uvicorn", "bilibili_video_info_mcp.fastapi_app:app", "--host", "0.0.0.0", "--port", "8000"]
+# CMD ["uv", "run",   "uvicorn", "bilibili_video_info_mcp.fastapi_app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["sh", "-c", "uv run uvicorn bilibili_video_info_mcp.fastapi_app:app --host 0.0.0.0 --port ${PORT:-8000}"]
